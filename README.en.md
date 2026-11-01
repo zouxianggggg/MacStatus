@@ -3,7 +3,7 @@
 <p align="center"><strong>Your Mac, at a glance.</strong><br />A native, compact macOS menu bar monitor with on-demand sampling.</p>
 <p align="center"><a href="README.md">简体中文</a> · <a href="#build-and-run">Build and run</a> · <a href="ROADMAP.md">Roadmap</a> · <a href="https://github.com/zouxianggggg/MacStatus/issues">Feedback</a></p>
 <p align="center">
-  <a href="https://github.com/zouxianggggg/MacStatus/actions/workflows/ci.yml"><img src="https://github.com/zouxianggggg/MacStatus/actions/workflows/ci.yml/badge.svg" alt="macOS build and tests" /></a>
+  <a href="https://github.com/zouxianggggg/MacStatus/actions/workflows/ci.yml"><img src="https://github.com/zouxianggggg/MacStatus/actions/workflows/ci.yml/badge.svg?branch=main" alt="macOS build and tests" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/Swift-5.9%2B-F05138?logo=swift&logoColor=white" alt="Swift 5.9+" />
 </p>
