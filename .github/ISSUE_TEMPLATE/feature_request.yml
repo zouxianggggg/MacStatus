@@ -1,0 +1,22 @@
+name: Idea / 功能建议
+description: Help shape a useful, lightweight Mac app / 一起打磨原生小工具
+title: "[Idea] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Use case / 使用场景
+      description: What are you trying to understand or accomplish? / 你希望解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior / 期望行为
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resource considerations / 资源占用考虑
+      description: Could this run on demand or reuse existing sampling? / 是否可以按需运行或复用现有采样？

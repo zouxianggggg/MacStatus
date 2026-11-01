@@ -1,0 +1,36 @@
+name: macOS build and tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Show build environment
+        run: |
+          sw_vers
+          swift --version
+      - name: Run unit tests
+        run: swift test --cache-path "$PWD/.build/cache" --scratch-path "$PWD/.build"
+      - name: Build application
+        run: ./scripts/build.sh
+      - name: Verify local package
+        run: |
+          codesign --verify --deep --strict dist/MacStatus.app
+          plutil -lint dist/MacStatus.app/Contents/Info.plist

@@ -1,0 +1,32 @@
+name: Bug / 问题反馈
+description: Tell us what happened / 帮助复现与修复问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "感谢反馈！请先检查截图和日志中的 IP、DNS、进程及路径。应用内可复制基础环境报告；不要直接公开完整 --diagnose 输出。"
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / 运行环境
+      description: App version, macOS version, chip / 应用版本、macOS 版本和芯片
+      placeholder: "0.5.0 · macOS version · Apple M-series / Intel"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior / 预期与实际表现
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details / 补充信息
+      description: For resource reports, include sampling mode, speed display, panel state, duration and metric definitions.

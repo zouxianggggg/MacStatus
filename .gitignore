@@ -1,0 +1,17 @@
+# Local build products and machine-specific verification
+/.build/
+/dist/
+/verification/
+/.swiftpm/xcode/xcuserdata/
+.DS_Store
+*.xcuserstate
+*.dSYM/
+
+# Local configuration and signing material
+.env
+.env.*
+*.p12
+*.p8
+*.key
+*.mobileprovision
+*.provisionprofile
